@@ -12,9 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
-  cors({
-    origin: ["http://localhost:3000/", "https://ascott-task-manager-app.onrender.com"],
-  })
+  cors()
 );
 app.use("/api/v1/tasks", taskRoutes);
 
